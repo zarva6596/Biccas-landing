@@ -42,17 +42,24 @@ export default function HowWeSupport() {
 
         <ul className="flex flex-col max-w-[509px] gap-[30px]">
           <li className="flex flex-row items-start gap-5">
-            <Image className="flex-shrink-0"
-            src={publishing} alt="Publishing" />
+            <div className="relative flex items-center justify-center gap-[21px]">
+              <div className="absolute inset-0 bg-white z-0 shadow" />
+              
+              <Image
+                src={publishing}
+                alt="Publishing"
+                className="w-[60px] h-[60px] z-10" 
+              />
+            </div>
             <div>
-            <h3 className="text-[28px] font-bold">Publishing</h3>
-            <p className="text-lg font-medium leading-[30px] text-[#A6A6A6]">
-              Plan, collaborate, and publish your content that drives meaningful engagement and growth for your brand.
-            </p>
+              <h3 className="text-[28px] font-bold">Publishing</h3>
+              <p className="text-lg font-medium leading-[30px] text-[#A6A6A6]">
+                Plan, collaborate, and publish your content that drives meaningful engagement and growth for your brand.
+              </p>
             </div>
           </li>
           <li className="flex flex-row items-start gap-5">
-            <Image className="flex-shrink-0"
+            <Image
             src={analytics} alt="Analytics" />
             <div>
             <h3 className="text-[28px] font-bold">Analytics</h3>

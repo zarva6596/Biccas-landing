@@ -12,8 +12,8 @@ export function Header() {
   ];
 
   return (
-    <header className="box-border inset-x-0 top-0 z-50 flex items-center justify-between px-[130px] pt-10">
-      <Link href="/" className="inline-block text-[50px] font-semibold text-[#54BD95] transform transition-transform duration-200 hover:scale-110">
+    <header className="box-border gap-[500px] flex items-center justify-between px-[130px] pt-10 max-w-[1440px] mx-auto w-full">
+      <Link href="/" className="text-[50px] leading-[30px] font-semibold text-[#54BD95] transform transition-transform duration-200 hover:scale-110">
         Biccas
       </Link>
 

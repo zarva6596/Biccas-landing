@@ -10,7 +10,7 @@ export function Footer() {
   const year = date.getFullYear();
   
   return (
-    <footer className="footer"> 
+    <footer className="mt-[130px]">
       <div className="container">
         <span className="text">© {year} Biccas. All rights reserved.</span>
 
