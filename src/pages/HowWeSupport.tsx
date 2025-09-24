@@ -50,7 +50,7 @@ const supportListData = [
 
 export default function HowWeSupport() {
   return (
-    <section className="flex flex-row items-center justify-between gap-8 w-[1440px] bg-[#F9F8FE] px-[130px] py-15 ">
+    <section className="flex flex-row items-center justify-between gap-8 w-[1440px] bg-bg-secondary px-[130px] py-15 ">
       <div className="flex flex-col justify-between gap-[30px] max-w-[644px]">
         <h1 className="text-5xl font-semibold">{heroData.h1}</h1>
 
@@ -59,26 +59,22 @@ export default function HowWeSupport() {
         </p>
 
         <div className="flex flex-row items-center gap-10">
-          <div className="flex flex-col gap-[18px]">
-            <Image src={fiveStars} alt="5 Stars" />
-            <span className="text-lg font-medium leading-[30px]">
-              <b>{companyRatings[0].rating}</b> / 5 rating
-            </span>
-            <span className="text-lg font-bold leading-[30px] text-[#A6A6A6]">
-              {companyRatings[0].company}
-            </span>
-          </div>
+          {companyRatings.map((item) => (
+            <div
+              key={item.company}
+              className="flex flex-col gap-[18px] items-start"
+            >
+              <Image src={item.img} alt={item.alt} />
 
-          <div className="flex flex-col gap-[18px]">
-            <Image src={fourStars} alt="4 Stars" />
-            <span className="text-lg font-medium leading-[30px]">
-              <b>{companyRatings[1].rating}</b> / 5 rating
-            </span>
-            
-            <span className="text-lg font-bold leading-[30px] text-[#A6A6A6]">
-              {companyRatings[1].company}
-            </span>
-          </div>
+              <span className="text-lg font-medium leading-[30px]">
+                <b>{item.rating}</b> / 5 rating
+              </span>
+
+              <span className="text-lg font-bold leading-[30px] text-text-secondary-grey">
+                {item.company}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
 
