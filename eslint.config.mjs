@@ -20,6 +20,13 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
+   {
+    files: ["**/*.{js,jsx,ts,tsx}"],
+    extends: [
+      ...next(),   // правила Next.js (включає React + TS)
+      prettier     // вимикає конфлікти з Prettier
+    ],
+  },
 ];
 
 export default eslintConfig;
