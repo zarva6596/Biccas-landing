@@ -1,7 +1,8 @@
-import HomeSection from "@/pages/HomeSection";
-import HowWeSupport from "@/pages/HowWeSupport";
-import OurFeatures from "@/pages/OurFeatures";
-
+import BenefitSection from "@/sections/BenefitSection";
+import ChoosePlanSection from "@/sections/ChoosePlanSection";
+import HomeSection from "@/sections/HeroSection";
+import HowWeSupport from "@/sections/HowWeSupport";
+import OurFeatures from "@/sections/OurFeatures";
 
 export default function Home() {
   return (
@@ -9,6 +10,8 @@ export default function Home() {
       <HomeSection />
       <HowWeSupport />
       <OurFeatures />
+      <BenefitSection />
+      <ChoosePlanSection />
     </main>
   );
 }
