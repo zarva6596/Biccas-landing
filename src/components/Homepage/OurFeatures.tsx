@@ -33,7 +33,7 @@ const features = [
 
 export default function OurFeatures() {
   return (
-    <section className="flex flex-col items-center gap-[74px] w-[1440px] bg-bg px-[130px] mt-[130px] ">
+    <section className="flex flex-col items-center gap-[74px] w-[1440px] bg-transparent px-[130px] mt-[130px] ">
 
       <div className="flex flex-row items-center justify-between gap-[113px]">
         <h2 className="text-5xl font-semibold max-w-[331px] text-left">

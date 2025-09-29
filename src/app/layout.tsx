@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import { Header } from "@/components/global/AppHeader";
 import { Footer } from "@/components/global/AppFooter";
 import "./globals.css";
+import { GradientLayer } from "./ui/GradientLayer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,10 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en">
   <body className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased `}>
-        <div className="flex flex-col min-h-screen max-w-360 mx-auto bg-white">
+        <div className="flex flex-col min-h-screen max-w-360 mx-auto bg-transparent">
+          <GradientLayer />
           <Header />
 
-          <main className="flex-grow">
+          <main className="flex-grow relative overflow-hidden">
             {children}
           </main>
 

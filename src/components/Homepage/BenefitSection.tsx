@@ -27,7 +27,7 @@ const benefitData = {
 
 export default function BenefitSection() {
   return (
-    <section className="flex flex-row items-center gap-[259px] max-w-[1440px] bg-bg px-[130px] mt-[130px] ">
+    <section className="flex flex-row items-center gap-[259px] max-w-[1440px] bg-transparent px-[130px] mt-[130px] ">
       <div className="flex flex-col gap-[50px] max-w-[471px]">
         <h2 className="text-[50px] font-bold">{benefitData.h2}</h2>
 
