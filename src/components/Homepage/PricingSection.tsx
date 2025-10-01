@@ -123,7 +123,6 @@ export default function PricingSection() {
               plan={plan}
 
               isSelected={isSelected(plan)}
-              frequency={frequency}
               onClick={() => setSelectedPlan(plan)}
             />);
         })}

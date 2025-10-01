@@ -4,7 +4,7 @@ import analytics from "@/assets/icons/analytics.svg";
 import engagement from "@/assets/icons/engagement.svg";
 import fiveStars from "@/assets/icons/5-stars.svg";
 import fourStars from "@/assets/icons/4-stars.svg";
-import SupportListPoint from "@/components/universal/SupportListPoint";
+import SupportListPoint from "@/components/Homepage/SupportListPoint";
 
 const heroData = {
   h1: "How we support our partners all over the world",

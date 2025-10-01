@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import { Header } from "@/components/global/AppHeader";
-import { Footer } from "@/components/global/AppFooter";
+import AppFooter from "@/components/global/AppFooter";
 import "./globals.css";
 import { GradientLayer } from "./ui/GradientLayer";
 
@@ -41,7 +41,7 @@ export default function RootLayout({
             {children}
           </main>
 
-          <Footer />
+          <AppFooter />
         </div>
       </body>
     </html>
