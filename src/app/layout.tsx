@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
   <body className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased `}>
-        <div className="flex flex-col min-h-screen max-w-360 mx-auto bg-transparent">
+        <div className="flex flex-col min-h-screen max-w-[100vw] overflow-hidden mx-auto bg-transparent">
           <GradientLayer />
           <Header />
 
