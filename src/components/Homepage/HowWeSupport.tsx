@@ -50,9 +50,9 @@ const supportListData = [
 
 export default function HowWeSupport() {
   return (
-    <section className="flex flex-row items-center justify-between gap-8 w-[1440px] bg-bg-secondary px-[130px] py-15 ">
-      <div className="flex flex-col justify-between gap-[30px] max-w-[644px]">
-        <h1 className="text-5xl font-semibold">{heroData.h1}</h1>
+    <section className="flex flex-row items-center justify-between gap-8 max-w-[1440px] bg-bg-secondary mx-auto px-6 lg:px-[130px] py-10 lg:py-15 ">
+      <div className="flex flex-col justify-between gap-10 lg:gap-[30px] max-w-[644px]">
+        <h1 className="text-2xl lg:text-5xl font-semibold">{heroData.h1}</h1>
 
         <p className="text-base font-medium leading-[30px] text-[#A6A6A6]">
           {heroData.p}
