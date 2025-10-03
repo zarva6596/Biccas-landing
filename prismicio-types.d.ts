@@ -70,6 +70,117 @@ type ContentRelationshipFieldWithData<
 }[Exclude<TCustomType[number], string>["id"]];
 
 /**
+ * Item in *footer nav → footer nav*
+ */
+export interface FooterNavDocumentDataFooterNavItem {
+  /**
+   * title field in *footer nav → footer nav*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_nav.footer_nav[].title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * footer_nav_link_1 field in *footer nav → footer nav*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_nav.footer_nav[].footer_nav_link_1
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  footer_nav_link_1: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * footer_nav_link_2 field in *footer nav → footer nav*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_nav.footer_nav[].footer_nav_link_2
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  footer_nav_link_2: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * footer_nav_link_3 field in *footer nav → footer nav*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_nav.footer_nav[].footer_nav_link_3
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  footer_nav_link_3: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * footer_nav_link_4 field in *footer nav → footer nav*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_nav.footer_nav[].footer_nav_link_4
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  footer_nav_link_4: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+}
+
+/**
+ * Content for footer nav documents
+ */
+interface FooterNavDocumentData {
+  /**
+   * footer nav field in *footer nav*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_nav.footer_nav[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  footer_nav: prismic.GroupField<Simplify<FooterNavDocumentDataFooterNavItem>>;
+}
+
+/**
+ * footer nav document from Prismic
+ *
+ * - **API ID**: `footer_nav`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterNavDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterNavDocumentData>,
+    "footer_nav",
+    Lang
+  >;
+
+/**
  * Item in *header nav → Navigation*
  */
 export interface HeaderNavDocumentDataNavigationItem {
@@ -126,7 +237,7 @@ export type HeaderNavDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = HeaderNavDocument;
+export type AllDocumentTypes = FooterNavDocument | HeaderNavDocument;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -149,6 +260,9 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      FooterNavDocument,
+      FooterNavDocumentData,
+      FooterNavDocumentDataFooterNavItem,
       HeaderNavDocument,
       HeaderNavDocumentData,
       HeaderNavDocumentDataNavigationItem,
